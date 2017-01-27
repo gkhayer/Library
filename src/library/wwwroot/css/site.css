@@ -1,38 +1,104 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
+body {
+  padding-top: 51px; }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+.baseColor {
+  color: #ce8c8c; }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
+.bgLight {
+  color: #ddb0b0; }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
+.bgLight2 {
+  color: #ecd4d4; }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"]
-{
-    width: 100%;
-}
+.bgDark {
+  color: #bf6868; }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-  /* Hide captions */
-  .carousel-caption {
-    display: none
-  }
-}
+.bgDark2 {
+  color: #ab4949; }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100%; } }
+
+.color_white, .student_wrapper {
+  color: white; }
+
+.right {
+  float: right; }
+
+.signin_button {
+  margin-top: 8.5px; }
+
+.text_center {
+  text-align: center; }
+
+.green_text {
+  color: #009a9a; }
+
+.div_wrapper {
+  background-color: grey;
+  padding: 5px;
+  float: left;
+  margin-top: 20px; }
+
+.footer_wrap {
+  color: #9d9d9d;
+  border-color: #080808;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  line-height: 20px;
+  background-color: #222; }
+
+.footer_text {
+  text-align: center; }
+
+.Sub_wrapper {
+  background-color: #ce8c8c; }
+
+.navbar {
+  margin-bottom: 0; }
+
+.nav_items_position {
+  margin-left: 400px; }
+
+.home_sub2navbar {
+  border: 1px solid #e7e7e7;
+  background-color: #e7e7e7;
+  display: inline-block;
+  width: 158px;
+  height: 355px;
+  line-height: 35px;
+  padding-top: 10px; }
+
+.home_sub2navbar > ul > li > a {
+  color: #777; }
+
+.home_sub2navbar > ul {
+  list-style-type: none; }
+
+.student_wrapper {
+  width: 600px;
+  margin-left: 250px;
+  margin-top: 20px;
+  background-color: grey;
+  padding-top: 10px;
+  padding-left: 10px; }
+
+.student_wrapper a {
+  color: #0fbdf6; }
+
+.student_wrapper .description_term {
+  float: left;
+  padding-right: 10px; }
+
+.home_childNavbar {
+  border: 1px solid red; }
+
+.SearchString_input {
+  line-height: 27px;
+  color: black; }

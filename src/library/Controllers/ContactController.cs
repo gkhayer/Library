@@ -15,7 +15,7 @@ namespace library.Controllers
         public IActionResult Index()
         {
 
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = " ";
 
             return View();
         }

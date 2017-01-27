@@ -1,0 +1,28 @@
+﻿@model library.Models.Student
+@await Component.InvokeAsync("AboutNavbar")
+@await Component.InvokeAsync("ChildSubNavbar")
+
+<form class="student_wrapper" asp-controller="Students" asp-action="Edit" asp-route-id="@Model.ID" method="post">
+    <div class="form-group">
+        <label asp-for="EnrollmentDate" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="EnrollmentDate" class="form-control" />
+            <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="FirstMidName" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="FirstMidName" class="form-control" />
+            <span asp-validation-for="FirstMidName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+    </div>
+    <button input type="submit" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Update</button>
+</form>

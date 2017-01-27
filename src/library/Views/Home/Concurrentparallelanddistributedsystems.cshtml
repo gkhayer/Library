@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Concurrent parallel and distributed systems";
+}
+@await Component.InvokeAsync("HomeNavbar")
+
+
+<div class="div_wrapper color_white">
+<h2>@ViewData["Title"]</h2>
+    <h3>Abstract</h3>
+    <p>
+        Distributed Computing is a field of computer science that studies distributed systems.
+        A distributed system is a model in which components located on networked computers communicate and coordinate their actions by passing messages.
+        The components interact with each other in order to achieve a common goal. Three significant characteristics of distributed systems are: concurrency of components,
+        lack of a global clock, and independent failure of components.[1] Examples of distributed systems vary from SOA-based systems to massively multiplayer online games to peer-to-peer applications.
+        <br />
+        A computer program that runs in a distributed system is called a distributed program, and distributed programming is the process of writing such programs.
+        There are many alternatives for the message passing mechanism, including pure HTTP, RPC-like connectors and message queues.
+    </p>
+</div>

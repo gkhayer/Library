@@ -1,0 +1,10 @@
+﻿@model library.Models.Student
+@await Component.InvokeAsync("AboutNavbar")
+@await Component.InvokeAsync("ChildSubNavbar")
+
+<form class="student_wrapper" asp-controller="Students" asp-action="Delete" method="post">
+    <h2>Delete</h2>
+    <p class="text-danger">@ViewData["ErrorMessage"]</p>
+    <h3>Are you sure you want to delete @Model.FirstMidName @Model.LastName?</h3>
+    <button input type="submit" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete</button>
+</form>

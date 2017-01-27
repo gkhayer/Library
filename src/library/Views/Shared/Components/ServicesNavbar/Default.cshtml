@@ -1,0 +1,54 @@
+﻿<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="row collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="col-md-3 dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Libraries<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a asp-controller="Services" asp-action="WestVirginiaSurvey">WVLC Survey</a></li>
+                        <li><a asp-controller="Services" asp-action="ConsultingServices">Consulting Services</a></li>
+                        <li><a asp-controller="Services" asp-action="ContinuingEducation">Continuing Education (CE)</a></li>
+                        <li><a asp-controller="Services" asp-action="Compliance">Compliance</a></li>                     
+                    </ul>
+                </li>
+                <li class="col-md-3 dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For State Government<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a asp-controller="Services" asp-action="ResearchAssistance">Research Assistance</a></li>
+                        <li><a asp-controller="Services" asp-action="ResearchTools">Research Tools</a></li>
+                        <li><a asp-controller="Services" asp-action="Support">Support</a></li>
+                        <li><a asp-controller="Services" asp-action="FacilitiesandEquipment">Facilities and Equipment</a></li>
+                    </ul>
+                </li>
+                <li class="col-md-3 dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Students and Educators <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a asp-controller="Services" asp-action="AmericaStoryfromAmericaLibrary">America's Story from America's Library</a></li>
+                        <li><a asp-controller="Services" asp-action="BorrowerCard">Borrower's Card</a></li>
+                        <li><a asp-controller="Services" asp-action="LettersaboutLiterature">Letters about Literature</a></li>
+                        <li><a asp-controller="Services" asp-action="WestVirginiaCenterfortheBook">West Virginia Center for the Book</a></li>
+                    </ul>
+                </li>
+                <li class="col-md-3 dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For the Public<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a asp-controller="Services" asp-action="Collections">Collections</a></li>
+                        <li><a asp-controller="Services" asp-action="DatabasesandResources">Databases and Resources</a></li>
+                        <li><a asp-controller="Services" asp-action="LibraryLocatorMap">Library Locator Map</a></li>
+                        <li><a asp-controller="Services" asp-action="SpecialServicesLibraryforBlindandPhysicallyHandicapped">Special Services Library for the Blind and Physically Handicapped</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

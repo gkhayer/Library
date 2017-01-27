@@ -8,35 +8,45 @@
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     </environment>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-                @*<a asp-area="" asp-controller="Home" asp-action="Home" class="navbar-brand">Library</a>*@
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Home">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-                <button type="button" class="btn btn-info">Sign In /Register</button>
+    <div class="Sub_wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav_items_position nav navbar-nav">
+                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-controller="Services" asp-action="Index">Services</a></li>
+                        <li><a asp-controller="About" asp-action="Index">About</a></li>
+                        <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+                    </ul>
+                    <button type="button" class="btn btn-default right signin_button">Sign In</button>
+                    <button type="button" class="btn btn-default right signin_button">Register</button>
+                </div>
             </div>
         </div>
-    </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-           
-        </footer>
     </div>
+    <footer>
+        <div class="footer_wrap">
+            <p class="footer_text">
+                Contact Us | Site Map<br />
+                In-State Toll Free: 1-800-642-9021<br />
+                &copy; 2016 -  University Library
+           </p>
+           </div>
+            </footer>
+        </div>
 </body>
 </html>

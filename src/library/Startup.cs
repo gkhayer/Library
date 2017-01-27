@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EFGetStarted.AspNetCore.NewDb.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,8 +9,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using library.Data;
 
-namespace library
+
+namespace library.Models
 {
     public class Startup
     {
@@ -33,14 +37,22 @@ namespace library
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<SchoolContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            //add AdddbContext method to register it as a service.
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;";
+            services.AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
+
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
+
+            services.AddRouting(config => config.LowercaseUrls = true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, SchoolContext context)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
@@ -61,30 +73,14 @@ namespace library
 
             app.UseStaticFiles();
 
-
-            //Home route 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "home",
-                    template: "{controller=Home}/{action=Index}");
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            //contact route
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "Contact",
-                    template: "{controller=Contact}/{action=Index}");
-            });
-
-            //About route
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "About",
-                    template: "{controller=About}/{action=Index}");
-            });
+            DbInitializer.Initialize(context);
         }
     }
 }
