@@ -243,3 +243,4 @@ ModelManifest.xml
 
 # Client side dependencies
 lib/
+site.scss/
